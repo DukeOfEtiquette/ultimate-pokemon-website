@@ -1,20 +1,27 @@
-// var person = prompt("Please enter your name", "Harry Potter");
+console.log("hello, world");
 
-// if (person != null) {
-//   console.log(person);
+// var myVariableName = "Hello, World!";
+// console.log(myVariableName); //excpeted output: Hello, World!
+
+// myVariableName = "no, goodbye world";
+// console.log(myVariableName); //expected output: no, goodbye world 
+
+// var promptQuestion = "What is the best starter pokemon?";
+// var response = prompt(promptQuestion);
+// console.log(response);
+
+// var alertMessage;
+
+// if (response === "Squirtle") {
+//     alertMessage = "Excellent choice! Squitle is good for your soul.";
+// } else if (response === "Bulbasaur") {
+//     alertMessage = "I mean...ok, sure.";
+// } else {
+//     alertMessage = "No, you are wrong.";
 // }
 
-var alertMessage;
-var favPokemon = prompt("What's your favorite Gen1 Starter Pokemon?");
+// alert(alertMessage);
 
-if(favPokemon === "Squirtle"){
-    alertMessage = "Excellent choice! Squirtle is good for your soul.";
-}else if(favPokemon === "Charmander"){
-    alertMessage = "Oh ok. You are that kid...I see.";
-}else if(favPokemon === "Bulbasaur"){
-    alertMessage = "Respect, but good luck...";
-}else {
-    alertMessage = "Dat choice maken nosa sense";
-}
+// var element = document.getElementById('response-output')
 
-alert(alertMessage);
+// element.innerText = alertMessage;
