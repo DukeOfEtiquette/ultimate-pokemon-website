@@ -1,7 +1,7 @@
 console.log("hello, world");
 
-// var myVariableName = "Hello, World!";
-// console.log(myVariableName); //excpeted output: Hello, World!
+var myVariableName = "Hello, World!";
+console.log(myVariableName); //excpeted output: Hello, World!
 
 // myVariableName = "no, goodbye world";
 // console.log(myVariableName); //expected output: no, goodbye world 
