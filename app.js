@@ -1,18 +1,9 @@
 'use strict';
 
-console.log("hello, world");
-
-var myVariableName = "Hello, World!";
-console.log(myVariableName); //excpeted output: Hello, World!
-
-myVariableName = "no, goodbye world";
-console.log(myVariableName); //expected output: no, goodbye world 
-
 var promptQuestion = "What is the best starter pokemon?";
 var response = prompt(promptQuestion);
 console.log(response);
 
-var alertMessage;
 var color;// declare variable
 
 if (response === "Squirtle") {
@@ -26,8 +17,14 @@ if (response === "Squirtle") {
     response = "Unown"
 }
 
-document.write("<h2>" + response + "</h2>");
-document.write("<img src=\"images/" + response + ".png\">");
-document.write("<p>" + response + " is the coolest!</p>");
+// Add Squirtle
+document.write("<section><h2>Squirtle</h2><img src=\"images/Squirtle.png\"><p>Squirtle is the coolest!</p></section>");
 
+// Add Bulbasaur
+document.write("<section><h2>Bulbasaur</h2><img src=\"images/Bulbasaur.png\"><p>Bulbasaur is the coolest!</p></section>");
+
+// Add Charmander
+document.write("<section><h2>Charmander</h2><img src=\"images/Charmander.png\"><p>Charmander is the coolest!</p></section>");
+
+// Update background color
 document.getElementById("content").style.backgroundColor = color;
