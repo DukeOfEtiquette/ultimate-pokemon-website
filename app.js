@@ -1,3 +1,5 @@
+'use strict';
+
 console.log("hello, world");
 
 var myVariableName = "Hello, World!";
@@ -14,19 +16,18 @@ var alertMessage;
 var color;// declare variable
 
 if (response === "Squirtle") {
-    alertMessage = "Excellent choice! Squitle is good for your soul.";
-    color = "#00FF00"; //assign variable a value
+    color = "lightblue";
 } else if (response === "Bulbasaur") {
-    alertMessage = "I mean...ok, sure.";
-    color = "#FF0000";
+    color = "lightgreen";
+} else if (response === "Charmander") {
+    color = "coral";
 } else {
-    color = "#FF0000";
-    alertMessage = "No, you are wrong.";
+    color = "grey";
+    response = "Unown"
 }
 
-alert(alertMessage);
+document.write("<h2>" + response + "</h2>");
+document.write("<img src=\"images/" + response + ".png\">");
+document.write("<p>" + response + " is the coolest!</p>");
 
-var element = document.getElementById('response-output')
-
-element.innerText = alertMessage;
-element.style.color = color; // use variable
+document.getElementById("content").style.backgroundColor = color;
