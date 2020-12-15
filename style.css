@@ -3,10 +3,15 @@ body {
 }
 
 #content {
-    position: relative;
+    position: relative; /* https://www.w3schools.com/css/css_positioning.asp */
     padding: 1rem;
     padding-bottom: 10vh;
     border-radius: 5%;
+
+    /* Use margin and width to center elements: */
+    /* https://www.w3schools.com/css/tryit.asp?filename=trycss_align_container */
+    /* margin: This must be set to 'auto' */
+    /* width: A percent of the *total* width that is split evenly on both sides. */
     margin: auto;
     width: 70%;
 }
@@ -24,7 +29,7 @@ li {
     padding: 5px;
 }
 
-/* clearfix */
+/* clearfix: https://www.w3schools.com/howto/howto_css_clearfix.asp */
 ul:after {
   content: "";
   display: table;
@@ -46,7 +51,7 @@ section {
     padding: 15px;
 }
 
-/* clearfix */
+/* clearfix: https://www.w3schools.com/howto/howto_css_clearfix.asp */
 section:after {
     margin-top: 1rem;
     content: "";
