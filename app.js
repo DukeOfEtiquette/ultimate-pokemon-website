@@ -73,7 +73,7 @@ function addPokemonToDocument(pokemonName, description) {
 /*
 * DESCRIPTION
 *
-* Present a Window Prompt with a provided message
+* Present a Window Prompt with a given message
 * and return the user's input.
 *
 * PARAMETERS
@@ -95,9 +95,32 @@ function getUserPrompt(message){
     return userInput;
 }
 
-// parameter: name of variable to be used INSIDE the function
-function sayMessage(msg) {
-    alert(msg); // msg is an argument for alert()
+/*
+* DESCRIPTION
+*
+* Present an Alert Window with a given message.
+*
+* PARAMETERS
+*
+* message => Type: String
+*
+* NOTE
+*
+* Developers refer to a function like this as a 'wrapper function.'
+* That is, the main purpose of 'sayMessage()' is to simply call the
+* function 'alert()' with (in this case) no additional logic or
+* computation.
+*
+* source: https://en.wikipedia.org/wiki/Wrapper_function
+*
+* This is useful if we want to provide validation before calling
+* the subroutine. Some validation ideas:
+*                             - Spellcheck
+*                             - Proper upper/lower casing
+*                             - Language translation
+*/
+function sayMessage(message) {
+    alert(message);
 }
 
 function add(a, b) {
