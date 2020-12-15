@@ -7,6 +7,8 @@
 // 
 // source: https://en.wikipedia.org/wiki/Don%27t_repeat_yourself
 
+/* ########## BEGIN FUNCTION DECLARATIONS ########## */
+
 /* ################# OLD CODE ################ */
 // Add Squirtle
 // document.write("<section> \
@@ -165,13 +167,33 @@ function setColorBasedOnUserInput(userResponse) {
     document.getElementById("content").style.backgroundColor = color;
 }
 
+/* ########## BEGIN SCRIPT LOGIC ########## */
+
 // sayMessage("Hello from the sayMessage() function");
-var foo = add(5, 2);
 
-var response = getUserPrompt();
+// Declare variable that will be used as an argument
+// when calling getUserPrompt()
+var promptQuestion = "Who is the best starter pokemon?";
 
+// According to the source comment for the function, it
+// will create the prompt window with the provided argmuent
+// and the user input will be returned from the funciton.
+var response = getUserPrompt(promptQuestion);
+
+// This function will set a background color based
+// upon the String provided, in this case the user's
+// input from the getUserPrompt() call above.
 setColorBasedOnUserInput(response);
 
+// Add some Pokemon descriptions to the page.
+//
+// According to the source comment for the function, the
+// first argument, pokemonName, must also be the title
+// of a PNG in the images/ directory.
 addPokemonToDocument("squirtle", "is totally rad");
 addPokemonToDocument("bulbasaur", "is leafy");
-addPokemonToDocument("charmander", "is on fire");
+
+// Let's do one with variables as arguments...
+var pokemonName = "charmander";
+var description = "is on fire";
+addPokemonToDocument(pokemonName, description);
