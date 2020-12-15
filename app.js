@@ -123,20 +123,45 @@ function sayMessage(message) {
     alert(message);
 }
 
-function setColorBasedOnUserInput(rsp) {
+/*
+* DESCRIPTION
+*
+* Set the background color of the main content area.
+* Color is determined based on value of argument provided.
+*
+* PARAMETERS
+*
+* userResponse => Type: String
+*/
+function setColorBasedOnUserInput(userResponse) {
 
-    if (rsp === "squirtle") {
+    // Decalre variable that will be used
+    // within this function *only*
+    var color;
+
+    // The value of userResponse will first be compared to
+    // squirtle. If it is a match, then the color will be set
+    // to "lightblue" and the if/else if/else chain will stop.
+    //
+    // If userResponse does not match 'squirtle' then it will
+    // be compared to 'bulbasaur' and so on...
+    //
+    // If nonoe of the if/else if conditions match, then the
+    // else condition will execute. This would be considered
+    // the 'default' value.
+    if (userResponse === "squirtle") {
         color = "lightblue";
-    } else if (rsp === "bulbasaur") {
+    } else if (userResponse === "bulbasaur") {
         color = "lightgreen";
-    } else if (rsp === "charmander") {
+    } else if (userResponse === "charmander") {
         color = "coral";
     } else {
         color = "grey";
-        rsp = "Unown"
     }
     
-    // Update background color
+    // This step requires an HTML element with an id of 'content' to
+    // be present on the page, otherwise this step will throw an
+    // error in your browser's developer console.
     document.getElementById("content").style.backgroundColor = color;
 }
 
@@ -145,7 +170,6 @@ var foo = add(5, 2);
 
 var response = getUserPrompt();
 
-var color;
 setColorBasedOnUserInput(response);
 
 addPokemonToDocument("squirtle", "is totally rad");
