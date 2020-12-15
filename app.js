@@ -6,6 +6,7 @@ function getUserPrompt(){
     // Create a message variable to be used as an ARGUMENT for the prompt() function
     var promptQuestion = "What is the best starter pokemon?";
     response = prompt(promptQuestion);
+    response = response.toLowerCase();
     console.log(response);
 }
 
@@ -29,8 +30,7 @@ var color;
 
 function setColorBasedOnUserInput(rsp) {
 
-    rsp = rsp.toLowerCase();
-
+    // 
     if (rsp === "squirtle") {
         color = "lightblue";
     } else if (rsp === "bulbasaur") {
@@ -76,7 +76,7 @@ setColorBasedOnUserInput(response);
 //                 </section>");
 
 function addPokemonToDocument(pokemonName, description) {
-    if(pokemonName === "Bulbasaur"){
+    if(pokemonName === "bulbasaur"){
         description = "Some unique desc for bulbasaur";
     }
 
@@ -87,9 +87,9 @@ function addPokemonToDocument(pokemonName, description) {
                     </section>");
 }
 
-addPokemonToDocument("Squirtle", "is totally rad");
-addPokemonToDocument("Bulbasaur", "is leafy");
-addPokemonToDocument("Charmander", "is on fire");
+addPokemonToDocument("squirtle", "is totally rad");
+addPokemonToDocument("bulbasaur", "is leafy");
+addPokemonToDocument("charmander", "is on fire");
 
 // if(response === "Squirtle"){
 //     addPokemonToDocument("Squirtle");
