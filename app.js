@@ -68,12 +68,29 @@ function addPokemonToDocument(pokemonName, description) {
                     </section>");
 }
 
-function getUserPrompt(){
-    // Create a message variable to be used as an ARGUMENT for the prompt() function
-    var promptQuestion = "What is the best starter pokemon?";
-    response = prompt(promptQuestion);
-    response = response.toLowerCase();
-    console.log(response);
+/*
+* DESCRIPTION
+*
+* Present a Window Prompt with a provided message
+* and return the user's input.
+*
+* PARAMETERS
+*
+* message => Type: String
+*
+* RETURN
+*
+* userInput => Type: String
+*/
+function getUserPrompt(message){
+    // Call the prompt() function with the provided
+    // message parameter
+    //
+    // Store the user's input in a variable
+    var userInput = prompt(message);
+
+    // Return the userInput variable
+    return userInput;
 }
 
 // parameter: name of variable to be used INSIDE the function
@@ -106,8 +123,7 @@ function setColorBasedOnUserInput(rsp) {
 // sayMessage("Hello from the sayMessage() function");
 var foo = add(5, 2);
 
-var response;
-getUserPrompt();
+var response = getUserPrompt();
 
 var color;
 setColorBasedOnUserInput(response);
