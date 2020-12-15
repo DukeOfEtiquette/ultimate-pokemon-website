@@ -28,11 +28,39 @@
 //                 </section>");
 
 /* ############## REFACTORED CODE ############# */
+
+/*
+* DESCRIPTION
+*
+* Adds a <section> to the page with the details of
+* a given Pokemon.
+*
+* PARAMETERS
+*
+* pokemonName => Type: String
+* description => Type: String
+*
+* REQUIREMENTS
+*
+* The provided pokemonName value **must** matach a file
+* name in the images/ directory.
+*/
 function addPokemonToDocument(pokemonName, description) {
-    if(pokemonName === "bulbasaur"){
+
+    // This conditional demonstrates our ability to
+    // set a 'default' value given *some condition*
+    //
+    // In this case, if the pokemonName is a certain value
+    // we set a unique description for that Pokemon
+    if(pokemonName === "bulbasaur") {
         description = "Some unique desc for bulbasaur";
     }
 
+    // When called, document.write() will add **any** string
+    // provided as an *argument*.
+    //
+    // In this case, we build a long String formatted in
+    // HTML markup, which the browser will *render*.
     document.write("<section> \
                         <h2>" + pokemonName + "</h2> \
                         <img src=\"images/" + pokemonName + ".png\"> \
