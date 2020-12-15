@@ -123,11 +123,6 @@ function sayMessage(message) {
     alert(message);
 }
 
-function add(a, b) {
-    var result = a + b; //some work, could be anything!
-    return result; //end the function with a return call
-}
-
 function setColorBasedOnUserInput(rsp) {
 
     if (rsp === "squirtle") {
