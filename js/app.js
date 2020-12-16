@@ -167,7 +167,24 @@ function setColorBasedOnUserInput(userResponse) {
     document.getElementById("content").style.backgroundColor = color;
 }
 
+function validateUserPassword() {
+    var storedPassword = "foo";
+
+    // While the user gives an INVALID password
+    // keep prompting for a password
+    // Compare input to stored password
+    do {
+        // Provide a prompt to user
+        // Stored their response in a variable
+        var passwd = getUserPrompt("Enter a password");
+    }while(passwd !== storedPassword);
+
+}
+
 /* ########## BEGIN SCRIPT LOGIC ########## */
+
+// TODO: Validate user password
+validateUserPassword();
 
 // sayMessage("Hello from the sayMessage() function");
 
@@ -197,3 +214,14 @@ addPokemonToDocument("bulbasaur", "is leafy");
 var pokemonName = "charmander";
 var description = "is on fire";
 addPokemonToDocument(pokemonName, description);
+
+// 0-based indexing
+// source: https://en.wikipedia.org/wiki/Zero-based_numbering
+
+var numberOfPikachu = getUserPrompt("How many Pikachu's do you want?");
+for (var i = 0; i < numberOfPikachu; i++) {
+    // body of for loop
+    console.log(i);
+    addPokemonToDocument("pikachu", "electrifying");
+}
+
